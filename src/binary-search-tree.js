@@ -8,20 +8,15 @@ const { Node } = require("../extensions/list-tree.js");
  */
 class BinarySearchTree {
   constructor() {
-    this.root = null;
+    this.treeRoot = null;
   }
 
   root() {
-    // throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
-    // return this.root;
-    return this.root;
+    return this.treeRoot;
   }
 
   add(data) {
-    // throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
-    this.root = addData(this.root, data);
+    this.treeRoot = addData(this.treeRoot, data);
 
     function addData(node, data) {
       if (!node) {
@@ -44,9 +39,7 @@ class BinarySearchTree {
   }
 
   has(data) {
-    // throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
-    return hasData(this.root, data);
+    return hasData(this.treeRoot, data);
 
     function hasData(node, data) {
       if (!node) {
@@ -66,9 +59,7 @@ class BinarySearchTree {
   }
 
   find(data) {
-    // throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
-    return findData(this.root, data);
+    return findData(this.treeRoot, data);
 
     function findData(node, data) {
       if (!node) {
@@ -88,9 +79,7 @@ class BinarySearchTree {
   }
 
   remove(data) {
-    // throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
-    this.root = removeData(this.root, data);
+    this.treeRoot = removeData(this.treeRoot, data);
 
     function removeData(node, data) {
       if (!node) {
@@ -131,13 +120,11 @@ class BinarySearchTree {
   }
 
   min() {
-    // throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
-    if (!this.root) {
+    if (!this.treeRoot) {
       return null;
     }
 
-    let node = this.root;
+    let node = this.treeRoot;
     while (node.left) {
       node = node.left;
     }
@@ -146,13 +133,11 @@ class BinarySearchTree {
   }
 
   max() {
-    // throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
-    if (!this.root) {
+    if (!this.treeRoot) {
       return null;
     }
 
-    let node = this.root;
+    let node = this.treeRoot;
     while (node.right) {
       node = node.right;
     }
